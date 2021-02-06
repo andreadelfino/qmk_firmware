@@ -1,0 +1,12 @@
+# SRC += config_led.c
+
+# CONSOLE_ENABLE = yes
+# COMMAND_ENABLE = yes
+
+# BOOTMAGIC_ENABLE = yes
+
+# WPM_ENABLE = yes
+# EXTRAKEY_ENABLE = yes
+# VELOCIKEY_ENABLE = yes
+
+RGB_MATRIX_CUSTOM_USER = yes
