@@ -1,0 +1,7 @@
+SRC += muse.c
+
+# CONSOLE_ENABLE = no
+
+# Do not enable RGB_MATRIX_ENABLE together with RGBLIGHT_ENABLE
+RGBLIGHT_ENABLE = no
+RGB_MATRIX_ENABLE = yes
