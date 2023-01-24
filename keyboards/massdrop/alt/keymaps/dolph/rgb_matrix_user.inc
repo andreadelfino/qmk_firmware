@@ -129,7 +129,7 @@ static bool dolph_alpha_run(effect_params_t* params) {
         }
     }
 
-    return led_max < DRIVER_LED_TOTAL;
+    return led_max < RGB_MATRIX_LED_COUNT;
 }
 
 
@@ -159,7 +159,7 @@ static bool dolph_alpha_run(effect_params_t* params) {
 //         }
 //     }
 
-//     return led_max < DRIVER_LED_TOTAL;
+//     return led_max < RGB_MATRIX_LED_COUNT;
 // }
 
 ///////////////////
@@ -197,7 +197,7 @@ static bool dolph_game_run(effect_params_t* params) {
         }
     }
 
-    return led_max < DRIVER_LED_TOTAL;
+    return led_max < RGB_MATRIX_LED_COUNT;
 }
 
 
@@ -245,7 +245,7 @@ static bool DOLPH_GAME_RAINBOW(effect_params_t* params) {
 //     RGB rgb = rgb_matrix_hsv_to_rgb(effect_func(rgb_matrix_config.hsv, i, 0));
 //     rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
 //   }
-//   return led_max < DRIVER_LED_TOTAL;
+//   return led_max < RGB_MATRIX_LED_COUNT;
 // }
 
 // bool STATIC_WASD(effect_params_t* params) {
@@ -288,7 +288,7 @@ static bool DOLPH_GAME_RAINBOW(effect_params_t* params) {
 //     for (uint8_t i = 74 ; i < led_max; i++) {
 //         rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
 //     }
-//     return led_max < DRIVER_LED_TOTAL;
+//     return led_max < RGB_MATRIX_LED_COUNT;
 // }
 
 // bool effect_runner_indicator(effect_params_t* params, i_f effect_func) {
@@ -304,7 +304,7 @@ static bool DOLPH_GAME_RAINBOW(effect_params_t* params) {
 //             rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
 //         }
 //     }
-//     return led_max < DRIVER_LED_TOTAL;
+//     return led_max < RGB_MATRIX_LED_COUNT;
 // }
 
 // static HSV indicator_gradient_math(HSV hsv, uint8_t i, uint8_t time) {
