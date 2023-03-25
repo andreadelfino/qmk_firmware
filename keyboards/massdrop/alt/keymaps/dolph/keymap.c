@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, D_RGB_K, D_RGB_M, _______, _______, _______, \
         _______, _______, _______, DBG_TOG, _______, _______, _______, _______, DBG_KBD, _______, D_RGB_I, D_RGB_U,          _______, _______, \
-        _______, _______, _______, _______, VLK_TOG, _______, _______, DBG_MTRX,D_RGB_P, D_RGB_N, _______, _______,          KC_MSTP, _______, \
+        _______, _______, _______, _______, VK_TOGG, _______, _______, DBG_MTRX,D_RGB_P, D_RGB_N, _______, _______,          KC_MSTP, _______, \
         _______, _______, _______,                            DBG_FAC,                            _______, _______, KC_MPRV, KC_MPLY, KC_MNXT  \
     ),
     /*
@@ -349,10 +349,11 @@ void set_layer_color(int layer) {
 // extern rgb_config_t rgb_matrix_config;
 // bool disable_layer_color;
 
-//
-// void rgb_matrix_indicators_user(void) {
+// https://github.com/qmk/qmk_firmware/blob/master/docs/ChangeLog/20221126.md#led-indicator-callback-refactoring-14864-idled-callback-refactor
+// bool rgb_matrix_indicators_user(void) {
 //     if (g_suspend_state || disable_layer_color || rgb_matrix_get_flags() == LED_FLAG_NONE || rgb_matrix_get_flags() == LED_FLAG_UNDERGLOW) {
-//         return;
+//         return true;
 //     }
 //     set_layer_color(get_highest_layer(layer_state));
+//     return false;
 // }
